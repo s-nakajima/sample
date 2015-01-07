@@ -1,12 +1,4 @@
 
-var NetCommonsApp = angular.module('NetCommonsApp',
-    [
-      'ui.bootstrap',
-      'ui.tinymce'
-    ]
-    );
-
-
 /**
  * NetCommonsWysiwyg factory
  */
@@ -35,8 +27,8 @@ NetCommonsApp.factory('NetCommonsWysiwyg', function() {
 		'contextmenu ' + 
 		'directionality ' + 
 		'emoticons ' + 
-		'example ' + 
-		'example_dependency ' + 
+		//'example ' + //Del 4.1
+		//'example_dependency ' + //Del 4.1
 		'fullpage ' + 
 		'fullscreen ' + 
 		'hr ' + 
@@ -79,12 +71,3 @@ NetCommonsApp.factory('NetCommonsWysiwyg', function() {
     options: options
   };
 });
-
-
-/**
- * base controller
- */
-NetCommonsApp.controller('NetCommons.base', function($scope, NetCommonsWysiwyg) {
-	$scope.options = NetCommonsWysiwyg.options;
-	$scope.content = 'Hello World!!';
-  });
