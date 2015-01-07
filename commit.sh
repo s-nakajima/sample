@@ -14,6 +14,10 @@ do
 
 	for file in `ls`
 	do
+		if [ "$file" = "nbproject" ]; then
+			echo "rm -Rf nbproject"
+			rm -Rf nbproject
+		fi
 		if [ "$file" = "bower_components" ]; then
 			echo "rm -Rf bower_components"
 			rm -Rf bower_components
