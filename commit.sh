@@ -39,24 +39,27 @@ done
 echo "git status"
 git status
 
-#echo "git add --all ?"
-#echo -n "y(es)/q(uit) [y]> "
-#read ANS
-#if [ "$ANS" = "" ]; then
-#	ANS="y"
-#fi
-#if [ "$ANS" = "q" ]; then
-#	exit 1
-#fi
+echo "git add --all ?"
+echo -n "y(es)/q(uit) [y]> "
+read ANS
+if [ "$ANS" = "" ]; then
+	ANS="y"
+fi
+if [ "$ANS" = "q" ]; then
+	exit 1
+fi
 
-#echo "git add --all"
-#git add --all
+echo "git add --all"
+git add --all
 
-#echo "git commit -m\"sample commit\""
-#git commit -m"sample commit"
+echo "Input message?"
+read ANS
 
-#echo "git push"
-#git push
+echo "git commit -m\"${ANS}\""
+git commit -m"${ANS}"
+
+echo "git push"
+git push
 
 #
 #-- end of file --
