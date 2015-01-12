@@ -12,8 +12,13 @@
 	<script type="text/javascript" src="../js/base.js"></script>
 
 	<script>
-		//var app2 = angular.module('nc.module');
+		//var app = angular.module('myapp', []);
+		//var app2 = angular.module('myapp');
 		//console.log(app2);
+		//var app3 = angular.module('notExistsApp');
+		//var app4 = angular.module('myapp', []);
+		//console.log(app);
+		//console.log(app4);
 	</script>
 </head>
 <body ng-controller="NetCommons.base">
@@ -21,6 +26,16 @@
 	<p>Nothing here {{'yet' + '!'}}</p>
 	<p>1 + 2 = {{ 1 + 2 }}</p>
 
+	<p>#### ng-controller="NetCommons.base" ####</p>
 	<p>{{content}}</p>
+	<p>value1 = {{value1}}</p>
+	<p>value2 = {{value2}}</p>
+
+	<div ng-controller="Controller1">
+		<p>#### ng-controller="Controller1" ####</p>
+		<p>{{content}}</p>
+		<p>value1 = {{value1}}</p>
+		<p>value2 = {{value2}}</p>
+	</div>
 </body>
 </html>
