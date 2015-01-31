@@ -19,3 +19,10 @@ NcModule.value('NcModuleValues', {
     value1: 'test value 1',
     value2: 'test value 2'
   });
+
+NcModule.value('NcModuleValueFunc', function(a, b) {
+    return a + b;
+  });
+
+
+NetCommonsApp.requires.push('nc.module');
