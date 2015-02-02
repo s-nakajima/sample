@@ -19,6 +19,9 @@ do
 			`which bower` --allow-root install
 		fi
 		if [ "$file" = "composer.json" ]; then
+			echo "`which php` composer.phar self-update"
+			`which php` composer.phar self-update
+
 			echo "`which php` composer.phar install"
 			`which php` composer.phar install
 		fi
